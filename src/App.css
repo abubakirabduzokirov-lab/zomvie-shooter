@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --ink: #0b0716;
+  --panel: #1a1030;
+  --edge: #3b2a5c;
+  --red: #e11d48;
+  --red-hi: #f43f5e;
+  --gold: #fbbf24;
+  --mute: #a1a1c2;
+  --pixel: "Press Start 2P", monospace;
+}
+
+/* ========== SAHIFA ========== */
+
+.abk-page {
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+  background: radial-gradient(ellipse at 70% 30%, #3b1e6e 0%, #140b26 50%, #07050d 100%);
+  color: #f5f3ff;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px;
+  box-sizing: border-box;
+}
+
+.abk-card {
+  background: var(--panel);
+  border: 3px solid var(--edge);
+  box-shadow: 0 0 0 3px var(--ink), 6px 6px 0 3px var(--ink);
+  padding: 16px;
+  color: #f5f3ff;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.abk-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.abk-header {
+  width: min(1000px, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.abk-h2 {
+  margin: 0;
+  font-family: var(--pixel);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.abk-left {
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.abk-h3 {
+  margin: 0;
+  font-family: var(--pixel);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.abk-muted {
+  margin: 0;
+  color: var(--mute);
+}
+
+.abk-msg {
+  margin: 0;
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.abk-chip {
+  font-family: var(--pixel);
+  font-size: 11px;
+  background: var(--ink);
+  border: 3px solid var(--edge);
+  padding: 8px 12px;
+  color: var(--gold);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+/* ========== TUGMALAR ========== */
+
+.abk-btn {
+  font-family: var(--pixel);
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 12px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 0;
+  background: #2a1d4a;
+  color: #f5f3ff;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--ink);
+  transition: transform 0.06s ease, box-shadow 0.06s ease, background 0.1s ease;
+}
+
+.abk-btn:hover:not(:disabled) { background: #3a2868; }
+
+.abk-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.abk-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.abk-primary {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.abk-primary:hover:not(:disabled) { background: var(--red-hi); }
+
+.abk-ghost { background: #2a1d4a; }
+
+.abk-grow { flex: 1; }
+
+/* ========== MENYU ========== */
+
+.abk-title {
+  font-family: var(--pixel);
+  font-size: 56px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+  color: #f5f3ff;
+  text-shadow: 5px 5px 0 var(--red), 10px 10px 0 var(--ink);
+  letter-spacing: 2px;
+}
+
+.abk-tag {
+  display: inline-block;
+  font-family: var(--pixel);
+  font-size: 9px;
+  padding: 8px 12px;
+  border: 3px solid var(--edge);
+  background: var(--ink);
+  color: var(--mute);
+  box-shadow: 3px 3px 0 var(--ink);
+  margin-bottom: 22px;
+}
+
+.abk-lead {
+  color: var(--mute);
+  margin: 18px 0 22px;
+  line-height: 1.7;
+}
+
+.abk-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 0;
+  border: 3px solid var(--edge);
+  background: var(--ink);
+  color: #f5f3ff;
+  font-size: 16px;
+  outline: none;
+  font-family: inherit;
+  box-shadow: inset 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.abk-input:focus {
+  border-color: var(--red);
+}
+
+.abk-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.abk-stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--mute);
+  flex-wrap: wrap;
+}
+
+.abk-hero {
+  width: min(1000px, 100%);
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.abk-hero-card { padding: 22px; }
+
+.abk-corner {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.abk-footer {
+  font-size: 12px;
+  color: #6b6b8a;
+  margin-top: 24px;
+}
+
+/* ========== QUROL RASMLARI VA BARLAR ========== */
+
+.abk-art {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.18) 2px, transparent 2px) 0 0 / 8px 8px,
+    linear-gradient(90deg, rgba(0, 0, 0, 0.18) 2px, transparent 2px) 0 0 / 8px 8px,
+    radial-gradient(circle at 50% 45%, var(--accent) 0%, #1a1030 90%);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.abk-art-big { height: 190px; }
+
+.abk-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.abk-bar-label {
+  width: 80px;
+  color: var(--mute);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+.abk-bar-track {
+  display: flex;
+  gap: 3px;
+  flex: 1;
+}
+
+.abk-bar-seg {
+  flex: 1;
+  height: 10px;
+  border: 2px solid var(--ink);
+}
+
+/* ========== SYUJET ========== */
+
+.abk-container { width: min(1000px, 100%); }
+
+.abk-chapters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.abk-chapter {
+  padding: 8px 12px;
+  font-size: 9px;
+}
+
+.abk-grid-levels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  gap: 20px;
+}
+
+.abk-level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.abk-level {
+  padding: 14px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.abk-level-num {
+  font-family: var(--pixel);
+  font-size: 14px;
+}
+
+.abk-level-stars {
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.abk-level-lock {
+  font-size: 9px;
+  color: var(--mute);
+}
+
+/* ========== GARAJ ========== */
+
+.abk-grid-shop {
+  width: min(1000px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 2fr;
+  gap: 20px;
+}
+
+.abk-weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  align-content: start;
+}
+
+.abk-weapon-tile {
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  color: #f5f3ff;
+  font-family: inherit;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.abk-weapon-tile:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0 0 0 3px var(--ink), 8px 8px 0 3px var(--ink);
+}
+
+.abk-active {
+  border-color: var(--red) !important;
+  box-shadow: 0 0 0 3px var(--ink), 6px 6px 0 3px var(--red) !important;
+}
+
+.abk-tile-name {
+  margin-top: 10px;
+  font-family: var(--pixel);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.abk-tile-state {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* ========== O'YIN ICHIDAGI HUD ========== */
+
+.hp-tag {
+  font-family: var(--pixel);
+  background: var(--ink);
+  color: #fff;
+  padding: 6px 8px;
+  border: 2px solid #fff;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.abk-hud {
+  position: absolute;
+  background: var(--ink);
+  border: 3px solid var(--edge);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 8px 12px;
+  font-family: var(--pixel);
+  font-size: 9px;
+  line-height: 1.6;
+  color: #f5f3ff;
+}
+
+.abk-hud-muted { color: var(--mute); }
+
+.abk-hud-bar {
+  height: 14px;
+  background: var(--ink);
+  border: 3px solid var(--edge);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.abk-hud-bar-fill {
+  height: 100%;
+  background: var(--red);
+  transition: width 0.15s ease;
+}
+
+.abk-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #fff;
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+.abk-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(7, 5, 13, 0.75);
+  font-family: var(--pixel);
+  pointer-events: none;
+}
+
+.abk-overlay-result {
+  background: rgba(7, 5, 13, 0.92);
+  pointer-events: auto;
+}
+
+.abk-overlay-title {
+  font-size: 22px;
+  margin: 0;
+  color: #f5f3ff;
+  text-shadow: 4px 4px 0 var(--red);
+}
+
+.abk-overlay-stars {
+  font-size: 18px;
+  color: var(--gold);
+  margin: 0;
+}
+
+.abk-overlay-text {
+  font-size: 10px;
+  margin: 0;
+  color: var(--mute);
+}
+
+@media (max-width: 760px) {
+  .abk-hero,
+  .abk-grid-levels,
+  .abk-grid-shop {
+    grid-template-columns: 1fr;
+  }
+  .abk-title { font-size: 36px; }
+  .abk-corner { top: 12px; left: 12px; }
+}
+
+/* ========== HARAKATLANUVCHI FON ========== */
+
+.abk-page {
+  background-size: 200% 200%;
+  animation: abkDrift 18s ease-in-out infinite;
+}
+
+.abk-page::before {
+  content: "";
+  position: absolute;
+  inset: -200px 0 0 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+    radial-gradient(1px 1px at 90px 120px, #fde68a, transparent),
+    radial-gradient(2px 2px at 160px 60px, #a5b4fc, transparent),
+    radial-gradient(1px 1px at 60px 170px, #ffffff, transparent),
+    radial-gradient(1px 1px at 130px 20px, #f0abfc, transparent);
+  background-size: 200px 200px;
+  opacity: 0.7;
+  animation: abkStars 30s linear infinite;
+}
+
+@keyframes abkDrift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes abkStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(200px); }
+}

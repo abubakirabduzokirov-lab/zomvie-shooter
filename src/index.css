@@ -1,0 +1,11 @@
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0b0d10;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+  user-select: none;
+}
+button { font-family: inherit; }
